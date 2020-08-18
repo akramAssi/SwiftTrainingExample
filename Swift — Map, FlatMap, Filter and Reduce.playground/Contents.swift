@@ -61,10 +61,19 @@ print("Flatmap ex 1: \(flatCars)")
 let aPersonArray = peopleArray.flatMap { $0.cars }.flatMap { $0 }
 print("Flatmap ex 2: \(aPersonArray)")
 
-//------Filter
+//ex 1------Filter
 
 let filteredNames = peopleArray.filter( {$0.age > 18 }).map({ return $0.name })
 print("filter age > 18 : \(filteredNames)")
+
+//ex 2-----filter
+var xccx=["dasd","dsds","eqeqw"]
+func isFourLetters(_ arr: [String]) -> [String] {
+    return arr.filter({$0.count == 4}).map({return $0})
+}
+
+print(isFourLetters(xccx))
+
 
 //ex 1------Reduce Approach 1
 
@@ -89,3 +98,4 @@ print("conciseSum: \(conciseSum)")
 // same flatMap and solve  problem if collection in collection is optional
 let flatmapArray2 = peopleArray.map({$0.cars}).reduce([], +)
 print("flatmapArray2 : \(flatmapArray2)")
+
