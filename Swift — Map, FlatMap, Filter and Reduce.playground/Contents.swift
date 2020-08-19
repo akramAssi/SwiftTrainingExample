@@ -69,10 +69,10 @@ print("filter age > 18 : \(filteredNames)")
 //ex 2-----filter
 var xccx=["dasd","dsds","eqeqw"]
 func isFourLetters(_ arr: [String]) -> [String] {
-    return arr.filter({$0.count == 4}).map({return $0})
+    return arr.filter({$0.count == 4})
 }
 
-print(isFourLetters(xccx))
+print("the word have 4 char : \(isFourLetters(xccx))")
 
 
 //ex 1------Reduce Approach 1
